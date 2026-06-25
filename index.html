@@ -177,8 +177,7 @@
 
 <script>
     // 🔗 นำ URL ยาวๆ ที่ได้จากขั้นตอนที่ 2 มาวางแทนที่ข้อความในเครื่องหมายอัญประกาศด้านล่างนี้ครับ
-   const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxDxUYRDIjEyTC1AKujB36fZjL-fYeIMFljq-A4zYJ8of4xYE3vWV_0UtFlUS2tro8/exec";
-
+    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxDxUYRDIjEyTC1AKujB36fZjL-fYeIMFljq-A4zYJ8of4xYE3vWV_0UtFlUS2tro8/exec";
     const form = document.getElementById('regForm');
     const submitBtn = document.getElementById('submitBtn');
     const closedNotice = document.getElementById('closedNotice');
@@ -186,7 +185,7 @@
 
     // 1. ฟังก์ชันเช็กสถานะเวลาเปิด-ปิดจาก Google Sheets ทันทีเมื่อเปิดหน้าเว็บ
     async function checkSystemStatus() {
-        if (WEB_APP_URL.includes("ใส่_URL")) return;
+        if (WEB_APP_URL.includes("https://script.google.com/macros/s/AKfycbxDxUYRDIjEyTC1AKujB36fZjL-fYeIMFljq-A4zYJ8of4xYE3vWV_0UtFlUS2tro8/exec")) return;
         
         try {
             const response = await fetch(WEB_APP_URL);
@@ -212,7 +211,7 @@
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
 
-        if (WEB_APP_URL.includes("ใส่_URL")) {
+        if (WEB_APP_URL.includes("https://script.google.com/macros/s/AKfycbxDxUYRDIjEyTC1AKujB36fZjL-fYeIMFljq-A4zYJ8of4xYE3vWV_0UtFlUS2tro8/exec")) {
             alert("แอดมินยังไม่ได้ตั้งค่าคีย์เชื่อมต่อระบบฐานข้อมูล (WEB_APP_URL)");
             return;
         }
